@@ -108,6 +108,18 @@ document.querySelector("#btnRegister").addEventListener("click",(e) => {
     }
 })
 
+// jQuery handler for btnStudent
+$('#btnStudent').on('click',function(){
+    $('#pgStatic').slideUp('slow')
+    $('#frmStudentLogin').slideDown('fast')
+})
+
+// jQuery handler for btnInstructor
+$('#btnInstructor').on('click',function(){
+    $('#pgStatic').slideUp('slow')
+    $('#frmInstructorLogin').slideDown('fast')
+})
+
 // jQuery handler for btnSwapLogin
 $('#btnSwapLogin').on('click',function(){
     $('#frmStudentLogin').slideUp('slow')
