@@ -121,13 +121,13 @@ $('#btnInstructor').on('click',function(){
 })
 
 // jQuery handler for btnSwapLogin
-$('#btnSwapLogin').on('click',function(){
+$('#btnStudentSwapLogin').on('click',function(){
     $('#frmStudentLogin').slideUp('slow')
     $('#frmStudentRegister').slideDown('fast')
 })
 
 //jQuery handler for btnSwapRegister
-$('#btnSwapRegister').on('click',function(){
+$('#btnStudentSwapRegister').on('click',function(){
     $('#frmStudentRegister').slideUp('slow')
     $('#frmStudentLogin').slideDown('fast')
 })
