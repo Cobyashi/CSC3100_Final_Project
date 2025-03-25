@@ -8,10 +8,22 @@
 </head>
 <body class="bg-dark">
     <div class="d-flex justify-content-center align-items-center vh-100">
-        <form class="card col-12 col-md-5 col-lg-4" id="frmLogin">
+        <form class="card col-12 col-md-5 col-lg-4" id="frmStudentLogin">
             <div class="card-body">
-                <h1 class="text-center mb-0 text-primary">Rate My Team</h1>
-                <h3 class="text-center mt-3">Login</h3>
+                <h1 class="text-center mb-0">Rate My Team</h1>
+                <h3 class="text-center mt-3">Student Login</h3>
+                <input id="txtUsername" class="form-control mt-4" type="email" placeholder="johndoe@email.com" aria-label="email">
+                <input id="txtPassword" class="form-control mt-2" type="password" placeholder="password" aria-label="password">
+                <hr />
+                <button class="btn btn-primary col-12 mt-2" type="button" id="btnLogin">Log in</button>
+                <button class="btn btn-link col-12 mt-2" type="button" id="btnPasswordReset">Forgot Password?</button>
+                <button class="btn btn-link col-12 mt-2" type="button" id="btnSwapLogin">Need an account? Register here</button>
+            </div>
+        </form>
+        <form class="card col-12 col-md-5 col-lg-4" id="frmInstructorLogin" style="display:none;">
+            <div class="card-body">
+                <h1 class="text-center mb-0">Rate My Team</h1>
+                <h3 class="text-center mt-3">Instructor Login</h3>
                 <input id="txtUsername" class="form-control mt-4" type="email" placeholder="johndoe@email.com" aria-label="email">
                 <input id="txtPassword" class="form-control mt-2" type="password" placeholder="password" aria-label="password">
                 <hr />

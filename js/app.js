@@ -110,12 +110,12 @@ document.querySelector("#btnRegister").addEventListener("click",(e) => {
 
 // jQuery handler for btnSwapLogin
 $('#btnSwapLogin').on('click',function(){
-    $('#frmLogin').slideUp('slow')
+    $('#frmStudentLogin').slideUp('slow')
     $('#frmStudentRegister').slideDown('fast')
 })
 
 //jQuery handler for btnSwapRegister
 $('#btnSwapRegister').on('click',function(){
     $('#frmStudentRegister').slideUp('slow')
-    $('#frmLogin').slideDown('fast')
+    $('#frmStudentLogin').slideDown('fast')
 })
