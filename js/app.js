@@ -119,3 +119,15 @@ $('#btnSwapRegister').on('click',function(){
     $('#frmStudentRegister').slideUp('slow')
     $('#frmStudentLogin').slideDown('fast')
 })
+
+//jQuery handler for btnPasswordReset
+$('#btnPasswordReset').on('click',function(){
+    $('#frmStudentLogin').slideUp('slow')
+    $('#frmPasswordReset').slideDown('fast')
+})
+
+//jQuery handler for btnReturnLogin
+$('#btnReturnLogin').on('click',function(){
+    $('#frmPasswordReset').slideUp('slow')
+    $('#frmStudentLogin').slideDown('fast')
+})
