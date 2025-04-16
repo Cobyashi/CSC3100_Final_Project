@@ -1,3 +1,5 @@
+let isInstructor = false;
+
 // Vanilla JS w/ query selector for Login form
 document.querySelector("#btnLogin").addEventListener("click",(e) => {
     const regEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
@@ -110,35 +112,43 @@ document.querySelector("#btnRegister").addEventListener("click",(e) => {
 
 // jQuery handler for btnStudent
 $('#btnStudent').on('click',function(){
+    isInstructor = false;
     $('#pgStatic').slideUp('slow')
     $('#frmStudentLogin').slideDown('fast')
 })
 
 // jQuery handler for btnInstructor
 $('#btnInstructor').on('click',function(){
+    isInstructor = true;
     $('#pgStatic').slideUp('slow')
-    $('#frmInstructorLogin').slideDown('fast')
+    $('#frmStudentLogin').slideDown('fast')
 })
 
-// jQuery handler for btnSwapLogin
+// jQuery handler for btnStudentSwapLogin, moves from student login form to student registration form
 $('#btnStudentSwapLogin').on('click',function(){
     $('#frmStudentLogin').slideUp('slow')
     $('#frmStudentRegister').slideDown('fast')
+
+    if (isInstructor) {
+        $('#contactFieldWrapper').hide(); // just hide this wrapper
+    } else {
+        $('#contactFieldWrapper').show();
+    }
 })
 
-//jQuery handler for btnSwapRegister
+//jQuery handler for btnSwapRegister, moves from student registration form to student login form
 $('#btnStudentSwapRegister').on('click',function(){
     $('#frmStudentRegister').slideUp('slow')
     $('#frmStudentLogin').slideDown('fast')
 })
 
-//jQuery handler for btnPasswordReset
+//jQuery handler for btnPasswordReset, moves from student login page to password reset form
 $('#btnPasswordReset').on('click',function(){
     $('#frmStudentLogin').slideUp('slow')
     $('#frmPasswordReset').slideDown('fast')
 })
 
-//jQuery handler for btnReturnLogin
+//jQuery handler for btnReturnLogin, moves from password reset form back to student login page
 $('#btnReturnLogin').on('click',function(){
     $('#frmPasswordReset').slideUp('slow')
     $('#frmStudentLogin').slideDown('fast')
