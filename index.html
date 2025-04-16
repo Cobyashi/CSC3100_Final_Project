@@ -20,16 +20,17 @@
                 <button class="btn btn-primary col-12 mt-2" type="button" id="btnInstructor" style="border-radius: 24px;" aria-label="Instructor Page Button">Instructor</button>
             </div>
         </form>
-        <form class="card col-12 col-md-5 col-lg-4" id="frmStudentLogin" style="display:none;">
+        <form class="card col-12 col-md-5 col-lg-4" id="frmLogin" style="display:none;">
             <div class="card-body">
                 <h1 class="text-center mb-0">Rate My Team</h1>
-                <h3 class="text-center mt-3">Student Login</h3>
-                <input id="txtUsername" class="form-control mt-4" type="email" placeholder="johndoe@email.com" aria-label="email">
+                <h3 class="text-center mt-3">Login</h3>
+                <input id="txtUsername" class="form-control mt-4" type="email" placeholder="johndoe@email.edu" aria-label="email">
                 <input id="txtPassword" class="form-control mt-2" type="password" placeholder="password" aria-label="password">
                 <hr />
                 <button class="btn btn-primary col-12 mt-2" type="button" id="btnLogin">Log in</button>
                 <button class="btn btn-link col-12 mt-2" type="button" id="btnPasswordReset">Forgot Password?</button>
-                <button class="btn btn-link col-12 mt-2" type="button" id="btnStudentSwapLogin">Need an account? Register here</button>
+                <button class="btn btn-link col-12 mt-2" type="button" id="btnSwapLogin">Need an account? Register here</button>
+                <button class="btn btn-link col-12 mt-2" type="button" id="btnLoginReturnLand">Return to landing page</button>
             </div>
         </form>
         <form class="card col-12 col-md-5 col-lg-4" id="frmPasswordReset" style="display:none;">
@@ -42,15 +43,15 @@
                 <button class="btn btn-primary col-12 mt-2" type="button" id="btnReturnLogin">Return to login</button>
             </div>
         </form>
-        <form class="card col-12 col-md-5 col-lg-4" id="frmStudentRegister" style="display:none;">
+        <form class="card col-12 col-md-5 col-lg-4" id="frmRegister" style="display:none;">
             <div class="card-body">
                 <div class="d-flex justify-content-center align-items-center vh-100">
                     <form class="card col-12 col-md-5 col-lg-4">
                         <div class="card-body">
                             <h1 class="text-center">Rate My Team</h1>
-                            <h3 class="text-center">Student Registration form</h3>
+                            <h3 class="text-center">Registration form</h3>
                             <div class="d-flex justify-content-center align-items-center vh-40" style="max-width: 100%;">
-                                <input id="txtRegisterUsername" class="form-control mt-3 mr-2" type="email" placeholder="johndoe@email.com" aria-label="student email">
+                                <input id="txtRegisterUsername" class="form-control mt-3 mr-2" type="email" placeholder="johndoe@email.edu" aria-label="student email">
                                 <input id="txtRegisterPassword" class="form-control mt-3 mr-2" type="password" placeholder="Password" aria-label="create password">
                                 <input id="txtConfirmPasswd" class="form-control mt-3" type="password" placeholder="Confirm Password" aria-label="confirm password">
                             </div>
@@ -63,7 +64,8 @@
                             </div>
                 <hr />
                 <button class="btn btn-primary col-12 mt-2" type="button" id="btnRegister">Register</button>
-                <button class="btn btn-link col-12 mt-2" type="button" id="btnStudentSwapRegister">Already have an account? Login here</button>
+                <button class="btn btn-link col-12 mt-2" type="button" id="btnSwapRegister">Already have an account? Login here</button>
+                <button class="btn btn-link col-12 mt-2" type="button" id="btnRegisterReturnLand">Return to landing page</button>
             </div>
         </form>
     </div>

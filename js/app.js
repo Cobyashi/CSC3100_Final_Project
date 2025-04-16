@@ -1,3 +1,4 @@
+// Global variable, on static landing page choose if instructor or student, value changes when swapping forms
 let isInstructor = false;
 
 // Vanilla JS w/ query selector for Login form
@@ -110,25 +111,26 @@ document.querySelector("#btnRegister").addEventListener("click",(e) => {
     }
 })
 
-// jQuery handler for btnStudent
+// jQuery handler for btnStudent, keeps boolean value for isInstructor as false
 $('#btnStudent').on('click',function(){
     isInstructor = false;
     $('#pgStatic').slideUp('slow')
-    $('#frmStudentLogin').slideDown('fast')
+    $('#frmLogin').slideDown('fast')
 })
 
-// jQuery handler for btnInstructor
+// jQuery handler for btnInstructor, sets boolean value isInstructor to true
 $('#btnInstructor').on('click',function(){
     isInstructor = true;
     $('#pgStatic').slideUp('slow')
-    $('#frmStudentLogin').slideDown('fast')
+    $('#frmLogin').slideDown('fast')
 })
 
-// jQuery handler for btnStudentSwapLogin, moves from student login form to student registration form
-$('#btnStudentSwapLogin').on('click',function(){
-    $('#frmStudentLogin').slideUp('slow')
-    $('#frmStudentRegister').slideDown('fast')
+// jQuery handler for btnSwapLogin, moves from login form to registration form
+$('#btnSwapLogin').on('click',function(){
+    $('#frmLogin').slideUp('slow')
+    $('#frmRegister').slideDown('fast')
 
+    // chatGPT if-else statement, if isInstructor is set to true, hides the contact input field, else show the input field
     if (isInstructor) {
         $('#contactFieldWrapper').hide(); // just hide this wrapper
     } else {
@@ -136,20 +138,32 @@ $('#btnStudentSwapLogin').on('click',function(){
     }
 })
 
-//jQuery handler for btnSwapRegister, moves from student registration form to student login form
-$('#btnStudentSwapRegister').on('click',function(){
-    $('#frmStudentRegister').slideUp('slow')
-    $('#frmStudentLogin').slideDown('fast')
+//jQuery handler for btnSwapRegister, moves from registration form to login form
+$('#btnSwapRegister').on('click',function(){
+    $('#frmRegister').slideUp('slow')
+    $('#frmLogin').slideDown('fast')
 })
 
-//jQuery handler for btnPasswordReset, moves from student login page to password reset form
+//jQuery handler for btnPasswordReset, moves from login page to password reset form
 $('#btnPasswordReset').on('click',function(){
-    $('#frmStudentLogin').slideUp('slow')
+    $('#frmLogin').slideUp('slow')
     $('#frmPasswordReset').slideDown('fast')
 })
 
-//jQuery handler for btnReturnLogin, moves from password reset form back to student login page
+//jQuery handler for btnReturnLogin, moves from password reset form back to login page
 $('#btnReturnLogin').on('click',function(){
     $('#frmPasswordReset').slideUp('slow')
-    $('#frmStudentLogin').slideDown('fast')
+    $('#frmLogin').slideDown('fast')
+})
+
+//jQuery handler for btnLoginReturnLand, if accidently clicked student or instructor by mistake, return back to landing page from the login page
+$('#btnLoginReturnLand').on('click',function(){
+    $('#frmLogin').slideUp('slow')
+    $('#pgStatic').slideDown('fast')
+})
+
+//jQuery handler for btnLoginReturnLand, if accidently clicked student or instructor by mistake, return back to landing page from the registration page
+$('#btnRegisterReturnLand').on('click',function(){
+    $('#frmRegister').slideUp('slow')
+    $('#pgStatic').slideDown('fast')
 })
