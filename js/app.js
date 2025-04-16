@@ -153,3 +153,9 @@ $('#btnReturnLogin').on('click',function(){
     $('#frmPasswordReset').slideUp('slow')
     $('#frmStudentLogin').slideDown('fast')
 })
+
+//jQuery handler for btnReturnLogin, moves from password reset form back to student login page
+$('#btnReturnLogin').on('click',function(){
+    $('#frmPasswordReset').slideUp('slow')
+    $('#frmStudentLogin').slideDown('fast')
+})
