@@ -47,6 +47,10 @@ document.querySelector("#btnLogin").addEventListener("click",(e) => {
             text: "Login success!",
             icon: "success"
         });
+
+        $('#frmLogin').slideUp('slow')
+        $('#frmRateTeamMember').slideDown('fast')
+        console.log($('#frmChooseTeamMember').length);
     }
 })
 
@@ -108,6 +112,9 @@ document.querySelector("#btnRegister").addEventListener("click",(e) => {
             text: "Registration success!",
             icon: "success"
         });
+
+        $('#frmRegister').slideUp('slow')
+        $('#frmChooseTeamMember').slideDown('fast')
     }
 })
 
